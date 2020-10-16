@@ -1,0 +1,16 @@
+bases:
+- ../../base
+#resources:
+#- job.yaml
+
+#patchesStrategicMerge:
+#- job.yaml
+patchesJson6902:
+  - target:
+      group: batch
+      version: v1
+      kind: Job
+      name: istio-install-job-om1pr
+      namespace: istio-system
+    path: patch.json
+namePrefix: cni-

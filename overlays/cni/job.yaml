@@ -1,0 +1,51 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: istio-install-job-om1pr
+  namespace: istio-system
+spec:
+  template:
+    metadata:
+    spec:
+      initContainers:
+      - command:
+        - --set
+        - components.cni.enabled=true
+        - --set
+        - components.cni.namespace=kube-system
+        - --set 
+        - values.cni.cniBinDir=/var/lib/cni/bin
+        - --set
+        - values.cni.cniConfDir="/etc/cni/multus/net.d"
+        - --set
+        - values.cni.chained=false
+        - --set 
+        - values.cni.cniConfFileName=istio-cni.conf
+        - --set
+        - values.sidecarInjectorWebhook.injectedAnnotations.k8s\.v1\.cni\.cncf\.io/networks=istio-cni
+        - --set
+        - values.cni.excludeNamespaces[0]=istio-system
+        - --set
+        - values.cni.excludeNamespaces[1]=kube-system
+        name: generate
+        
+      - command:
+        - --set
+        - components.cni.enabled=true
+        - --set
+        - components.cni.namespace=kube-system
+        - --set 
+        - values.cni.cniBinDir=/var/lib/cni/bin
+        - --set
+        - values.cni.cniConfDir="/etc/cni/multus/net.d"
+        - --set
+        - values.cni.chained=false
+        - --set 
+        - values.cni.cniConfFileName=istio-cni.conf
+        - --set
+        - values.sidecarInjectorWebhook.injectedAnnotations.k8s\.v1\.cni\.cncf\.io/networks=istio-cni
+        - --set
+        - values.cni.excludeNamespaces[0]=istio-system
+        - --set
+        - values.cni.excludeNamespaces[1]=kube-system
+        name: apply

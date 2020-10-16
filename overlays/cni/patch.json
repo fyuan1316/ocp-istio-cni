@@ -1,0 +1,147 @@
+[
+    { "op": "add",
+      "path": "/spec/template/spec/initContainers/1/command/-",
+      "value": "--set"
+    },
+    { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "components.cni.enabled=true"
+    },
+    { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "components.cni.namespace=kube-system"
+      },
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "values.cni.cniBinDir=/var/lib/cni/bin"
+      },
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "values.cni.cniConfDir=\"/etc/cni/multus/net.d\""
+      },
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "values.cni.chained=false"
+      },
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "values.cni.cniConfFileName=istio-cni.conf"
+      },
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "values.sidecarInjectorWebhook.injectedAnnotations.k8s\\.v1\\.cni\\.cncf\\.io/networks=istio-cni"
+      },
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "values.cni.excludeNamespaces[0]=istio-system"
+      },
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/1/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/1/command/-",
+          "value": "values.cni.excludeNamespaces[1]=kube-system"
+      },
+      
+      { "op": "add",
+        "path": "/spec/template/spec/initContainers/2/command/-",
+        "value": "--set"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "components.cni.enabled=true"
+      },
+      { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "components.cni.namespace=kube-system"
+        },
+        { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "values.cni.cniBinDir=/var/lib/cni/bin"
+        },
+        { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "values.cni.cniConfDir=\"/etc/cni/multus/net.d\""
+        },
+        { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "values.cni.chained=false"
+        },
+        { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "values.cni.cniConfFileName=istio-cni.conf"
+        },
+        { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "values.sidecarInjectorWebhook.injectedAnnotations.k8s\\.v1\\.cni\\.cncf\\.io/networks=istio-cni"
+        },
+        { "op": "add",
+          "path": "/spec/template/spec/initContainers/2/command/-",
+          "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "values.cni.excludeNamespaces[0]=istio-system"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "--set"
+        },
+        { "op": "add",
+            "path": "/spec/template/spec/initContainers/2/command/-",
+            "value": "values.cni.excludeNamespaces[1]=kube-system"
+        }
+]

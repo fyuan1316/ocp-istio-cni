@@ -1,0 +1,28 @@
+[
+    { "op": "add",
+      "path": "/spec/template/spec/initContainers/1/command/-",
+      "value": ["--set","components.cni.enabled=true",
+                "--set","components.cni.namespace=kube-system",
+                "--set","values.cni.cniBinDir=/var/lib/cni/bin",
+                "--set","values.cni.cniConfDir=\"/etc/cni/multus/net.d\"",
+                "--set","values.cni.chained=false",
+                "--set","values.cni.cniConfFileName=istio-cni.conf",
+                "--set","values.cni.cniConfFileName=istio-cni.conf",
+                "--set","values.cni.excludeNamespaces[0]=istio-system",
+                "--set","values.cni.excludeNamespaces[1]=kube-system"
+                ] 
+    },
+    { "op": "add",
+        "path": "/spec/template/spec/initContainers/2/command/-",
+        "value": ["--set","components.cni.enabled=true",
+                  "--set","components.cni.namespace=kube-system",
+                  "--set","values.cni.cniBinDir=/var/lib/cni/bin",
+                  "--set","values.cni.cniConfDir=\"/etc/cni/multus/net.d\"",
+                  "--set","values.cni.chained=false",
+                  "--set","values.cni.cniConfFileName=istio-cni.conf",
+                  "--set","values.cni.cniConfFileName=istio-cni.conf",
+                  "--set","values.cni.excludeNamespaces[0]=istio-system",
+                  "--set","values.cni.excludeNamespaces[1]=kube-system"
+                  ] 
+      }
+]
